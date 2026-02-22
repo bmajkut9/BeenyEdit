@@ -1,0 +1,172 @@
+Project: CLI Text Editor - "SimpleEdit"
+Final Feature Set:
+
+Open, edit, and save text files
+Navigate with arrow keys
+Insert/delete characters and lines
+Basic commands (save, quit, search)
+Line numbers
+Status bar
+Undo/redo (advanced stage)
+
+
+Stage Breakdown
+Stage 1: Foundation - File Reading & Display
+Goal: Read a file and display it line by line
+What you'll learn:
+
+File I/O (fopen, fgets, fclose)
+Dynamic memory allocation (malloc, realloc, free)
+Arrays of pointers (array of strings)
+String handling
+
+Deliverables:
+
+Program takes filename as argument
+Reads entire file into memory
+Displays all lines with line numbers
+Properly frees all memory
+
+Example output:
+$ ./simpleedit test.txt
+  1 | Hello world
+  2 | This is a test
+  3 | Line three
+
+Stage 2: Basic Data Structure - Line Buffer
+Goal: Create a robust data structure to hold the file
+What you'll learn:
+
+struct definitions
+Linked lists OR dynamic arrays
+Memory management patterns
+Encapsulation in C
+
+Deliverables:
+
+Define a Buffer struct to hold lines
+Implement functions:
+
+buffer_create()
+buffer_insert_line()
+buffer_delete_line()
+buffer_get_line()
+buffer_free()
+
+
+Test with creating/modifying buffers
+
+
+Stage 3: Terminal Control - Raw Mode & Display
+Goal: Take control of the terminal for interactive editing
+What you'll learn:
+
+Terminal control (termios on Unix/Linux)
+Escape sequences (ANSI codes)
+Clearing screen, positioning cursor
+Raw vs canonical mode
+
+Deliverables:
+
+Enter "raw mode" (disable line buffering)
+Clear screen and position cursor
+Redraw entire screen
+Exit cleanly and restore terminal
+
+Example:
+┌─────────────────────────────────┐
+│  1 | Hello world                │
+│  2 | This is a test             │
+│  3 | Line three                 │
+│                                  │
+│ test.txt | 3 lines | Line 1     │ ← Status bar
+└─────────────────────────────────┘
+
+Stage 4: Cursor & Navigation
+Goal: Move cursor around with arrow keys
+What you'll learn:
+
+Reading keyboard input character-by-character
+Escape sequence parsing (arrow keys = multi-byte)
+Cursor position tracking
+Viewport/scrolling (if file > screen height)
+
+Deliverables:
+
+Track cursor position (row, column)
+Arrow keys move cursor
+Handle boundaries (can't go below last line)
+Implement scrolling for large files
+Visual cursor on screen
+
+
+Stage 5: Text Insertion & Deletion
+Goal: Actually edit the text!
+What you'll learn:
+
+String manipulation (insert char in middle)
+realloc for growing strings
+Memory-efficient insertions
+Edge cases (empty lines, end of line)
+
+Deliverables:
+
+Type characters at cursor position
+Backspace deletes character
+Enter creates new line
+Delete key removes character
+Update data structure in real-time
+
+
+Stage 6: File Operations - Save & Load
+Goal: Persist changes to disk
+What you'll learn:
+
+File writing (fwrite, fprintf)
+Error handling (permissions, disk full)
+Backup strategies
+Command parsing
+
+Deliverables:
+
+Ctrl+S saves file
+Ctrl+Q quits
+Prompt if unsaved changes
+Handle save errors gracefully
+"Modified" indicator in status bar
+
+
+Stage 7: Search Functionality
+Goal: Find text in the document
+What you'll learn:
+
+String searching (strstr, or implement your own)
+Command mode (like vim)
+Highlighting matches
+Navigation between matches
+
+Deliverables:
+
+Ctrl+F enters search mode
+Type search term
+Highlight matches
+n/N for next/previous match
+ESC exits search mode
+
+
+Stage 8: Advanced Features
+Goal: Polish and extend
+What you'll learn:
+
+Undo/redo (command pattern, stack of operations)
+Syntax highlighting (basic)
+Copy/paste
+Line wrapping
+Configuration files
+
+Pick 1-2:
+
+Undo/redo: Stack of operations with memory management
+Copy/paste: Clipboard buffer, yanking lines
+Syntax highlighting: Pattern matching, color codes
+Multiple files: Tabs or buffers

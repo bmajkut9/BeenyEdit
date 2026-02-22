@@ -1,0 +1,108 @@
+Practical Tools
+1. Text Editor (CLI-based)
+Build a simple command-line text editor like nano
+
+Covers: Dynamic memory, linked lists, file I/O, string manipulation, buffers
+Difficulty: Medium-Hard
+Cool factor: Actually usable!
+
+2. Memory Allocator (Custom malloc/free)
+Implement your own version of malloc(), free(), calloc()
+
+Covers: Pointers, memory management, linked lists, system calls, header structures
+Difficulty: Hard
+Learning value: Deep understanding of memory
+
+3. Shell/Command Interpreter
+Build a basic Unix shell (like bash)
+
+Covers: Process management, fork(), exec(), pipes, string parsing, environment variables
+Difficulty: Medium-Hard
+Cool factor: Run actual commands!
+
+4. File Compression Tool
+Implement Huffman coding or simple run-length encoding
+
+Covers: Binary trees, file I/O, bit manipulation, dynamic memory, algorithms
+Difficulty: Medium
+Practical: Compress real files!
+
+5. Basic JSON Parser
+Parse JSON files into C structs
+
+Covers: String parsing, dynamic memory, structs, recursion, union types
+Difficulty: Medium
+Useful: Parse config files!
+
+Compiler/Interpreter Projects
+6. Calculator with Variables
+Expression evaluator supporting variables and functions
+
+Covers: Parsing, symbol tables (hash tables), memory management, recursion
+Difficulty: Medium
+Example: x = 5; y = x * 2 + 3;
+
+7. Bytecode Interpreter
+Design your own bytecode format and VM to execute it
+
+Covers: Stack-based execution, memory management, function calls, instruction dispatch
+Difficulty: Medium-Hard
+Cool factor: Your own mini programming language!
+
+8. Subset C Compiler
+Compile a tiny subset of C to assembly or bytecode
+
+Covers: Lexing, parsing, ASTs, code generation, deep C understanding
+Difficulty: Very Hard
+Learning value: Maximum!
+
+Educational/Simulation
+9. Banking System
+ATM/bank with accounts, transactions, persistence
+
+Covers: Structs, file I/O, linked lists, memory management, input validation
+Difficulty: Easy-Medium
+Features: Deposits, withdrawals, transfers, transaction history
+
+10. Student Grade Management System
+Track students, courses, grades with statistics
+
+Covers: Structs, arrays, sorting, file I/O, searching, reporting
+Difficulty: Easy-Medium
+Features: GPA calculation, course averages, student lookup
+
+11. Library Management System
+Track books, members, checkouts, due dates
+
+Covers: Structs, linked lists, file persistence, date handling, searching
+Difficulty: Medium
+Features: Late fees, reservations, inventory
+
+12. Process Scheduler Simulator
+Simulate CPU scheduling algorithms (FCFS, Round Robin, SJF)
+
+Covers: Queues, linked lists, structs, algorithms, timing simulation
+Difficulty: Medium
+Educational: Learn OS concepts!
+
+Data Structures & Algorithms
+13. Database Engine (Tiny)
+Simple key-value store or relational database
+
+Covers: B-trees, file I/O, indexing, memory management, query parsing
+Difficulty: Hard
+Features: CREATE, INSERT, SELECT, WHERE clauses
+
+14. Graph Algorithm Visualizer
+Implement and visualize graph algorithms
+
+Covers: Graphs, adjacency lists/matrices, DFS/BFS, Dijkstra's, memory management
+Difficulty: Medium
+Output: ASCII art or file output for visualization
+
+15. Memory Pool Manager
+Build a custom memory pool for frequent allocations
+
+Covers: Memory management, linked lists, fragmentation, alignment
+Difficulty: Medium-Hard
+Practical: Optimize allocations!
