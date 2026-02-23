@@ -16,8 +16,7 @@ int main(int argc, char *argv[]) {
                // until hitting the null terminator
   FILE *fileptr;
 
-  if ((fileptr = fopen(filename, "r")) ==
-      NULL) { // fopen returns pointer to FILE struct
+  if ((fileptr = fopen(filename, "r")) == NULL) { // fopen returns pointer to FILE struct
     // Inside fopen, it does something like:
     // char *ptr = filename;  // ptr = 0x1000
     // while (*ptr != '\0') {
@@ -68,7 +67,10 @@ int main(int argc, char *argv[]) {
            linePtrs[i]); // i think \n would be included in the char array
   }
 
-  // eh I'll make Makefile tomorrow
+
+
+
+
 
   for (int i = 0; i < lineCount; i++) {
     free(linePtrs[i]);
